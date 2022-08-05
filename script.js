@@ -1,4 +1,30 @@
 function toggleMode(){
-    const darkMode = ["dark-mode"]
-    document.body.classList.toggle(darkMode);
+    const checkbox = document.querySelector("#click");
+    const isChecked = checkbox.checked;
+    if(isChecked){
+        document.body.classList.add("dark-mode");
+        storageTheme("dark-mode")
+    } else {
+        document.body.classList.remove("dark-mode");
+        storageTheme("white-mode") 
+    }
+}
+
+function storageTheme(theme){
+    localStorage.setItem("@testando:theme", theme)
+}
+
+function getStorageTheme(){
+    const storage = localStorage.getItem("@testando:theme")
+
+    return storage
+}
+
+window.onload = function(){
+    const theme = getStorageTheme();
+    if(theme === "dark-mode"){
+        const checkbox = document.querySelector("#click");
+        checkbox.checked = true;
+        toggleMode()
+    }
 }

@@ -30,7 +30,7 @@ hr{
     border: 1px solid var(--c-1);
 }
 
-button{
+label{
     -webkit-appearance: none;
     appearance: none;
     height: 40px;
@@ -44,7 +44,7 @@ button{
     cursor: pointer;
 }
 
-button:after{
+label:after{
     content: "";
     position: absolute;
     height: 30px;
@@ -55,21 +55,25 @@ button:after{
     border-radius: 50%;
 }
 
-button:hover{
+label:hover{
     background: var(--c-3);
 }
 
-.dark-mode button{
+.dark-mode label{
     background-color: var(--c-2);
 }
 
-.dark-mode button:after{
+.dark-mode label:after{
     background-color: transparent;
     box-shadow: 10px 10px #15181f;
     top: -7px;
     left: 25px;
 }
 
-.dark-mode button:hover{
+.dark-mode label:hover{
     background: var(--c-3);
+}
+
+input#click{
+    display: none;
 }
