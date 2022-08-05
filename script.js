@@ -1,5 +1,5 @@
 function toggleMode(){
-    const checkbox = document.querySelector("#click");
+    const checkbox = document.querySelector("#change-mode");
     const isChecked = checkbox.checked;
     if(isChecked){
         document.body.classList.add("dark-mode");
@@ -23,7 +23,7 @@ function getStorageTheme(){
 window.onload = function(){
     const theme = getStorageTheme();
     if(theme === "dark-mode"){
-        const checkbox = document.querySelector("#click");
+        const checkbox = document.querySelector("#change-mode");
         checkbox.checked = true;
         toggleMode()
     }
