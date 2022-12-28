@@ -3,23 +3,24 @@ function toggleMode(){
     const isChecked = checkbox.checked;
     if(isChecked){
         document.body.classList.add("dark-mode");
-        storageTheme("dark-mode")
+        storageTheme("dark-mode");
     } else {
         document.body.classList.remove("dark-mode");
-        storageTheme("white-mode") 
+        storageTheme("white-mode");
     }
 }
 
 function storageTheme(theme){
-    localStorage.setItem("@testando:theme", theme)
+    localStorage.setItem("@testando:theme", theme);
 }
 
 function getStorageTheme(){
-    const storage = localStorage.getItem("@testando:theme")
+    const storage = localStorage.getItem("@testando:theme");
 
     return storage
 }
 
+//disparar evento após elemento ter sido carregado
 window.onload = function(){
     const theme = getStorageTheme();
     if(theme === "dark-mode"){

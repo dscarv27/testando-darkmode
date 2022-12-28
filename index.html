@@ -8,11 +8,24 @@
     <title>testando dark-mode</title>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
+    <header>
+        <h1>Olá, mundo!</h1>
+
+        <div class="change-theme">
+            <!-- <button class="btn-toggle-mode" onclick="toggleMode()"></button> -->
+
+            <input type="checkbox" class="btn-toggle-mode" id="change-mode" onchange="toggleMode()" />
+            <label for="change-mode"></label>
+        </div>
+    </header>
     <hr>
-    <!-- <button class="btn-toggle-mode" onclick="toggleMode()"></button> -->
-    <input type="checkbox" class="btn-toggle-mode" id="change-mode" onchange="toggleMode()" />
-    <label for="click"></label>
+    <main>
+
+    </main>
+    <!-- <hr> -->
+    <footer>
+
+    </footer>
 
     <script defer src="script.js"></script>
 </body>

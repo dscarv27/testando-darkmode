@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;900&display=swap');
 
+*{
+    margin 0;
+}
+
 html{
     --c-main:  #E0F6FF;
     --c-text: #000000;
@@ -21,18 +25,16 @@ body.dark-mode{
     --c-3: #964EC2;
 }
 
-
 h1{
     color: var(--c-text);
 }
 
 hr{
     border: 1px solid var(--c-1);
+    width: 75%;
 }
 
 label{
-    -webkit-appearance: none;
-    appearance: none;
     height: 40px;
     width: 75px;
     background: var(--c-2);
@@ -50,7 +52,7 @@ label:after{
     height: 30px;
     width: 30px;
     background-color: #ffffff;
-    top: 3.5px;
+    top: 5px;
     left: 5px;
     border-radius: 50%;
 }
@@ -66,8 +68,8 @@ label:hover{
 .dark-mode label:after{
     background-color: transparent;
     box-shadow: 10px 10px #15181f;
-    top: -7px;
-    left: 25px;
+    top: -5px;
+    left: 30px;
 }
 
 .dark-mode label:hover{
